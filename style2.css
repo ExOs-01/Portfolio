@@ -7,6 +7,8 @@ body {
     padding: 20px;
 }
 .container {
+    display: grid;
+    grid-template: auto;
     max-width: 800px;
     margin: auto;
     background-color: #2b2b2b;
@@ -136,7 +138,10 @@ body {
     transform: scale(1.05);
     font-weight: bold;
   }
-  a:link {
+
+  
+  
+a:link {
     text-decoration: none;
     background: transparent;
     color: aqua;

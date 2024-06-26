@@ -1,0 +1,133 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #1e1e1e;
+    color: #fff;
+}
+.image-container {
+    position: relative;
+    width: 100%;
+    padding-top: 59.5%;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 2px solid #444;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+.image-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: 70%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+}
+.image-container img:nth-child(1) {
+    z-index: 1;
+}
+.image-container img:nth-child(2) {
+    z-index: 2;
+    opacity: 0;
+}
+.image-container:hover img:nth-child(1) {
+    opacity: 0;
+}
+.image-container:hover img:nth-child(2) {
+    opacity: 1;
+}
+
+  a:link {
+    text-decoration: none;
+    background: transparent;
+    color: aqua;
+    font-size: medium;
+  }
+  
+  a:visited {
+    text-decoration: none;
+    background: transparent;
+    color: aqua;
+    font-size: medium;
+  }
+  
+  a:hover {
+    text-decoration: none;
+    background: transparent;
+    color: aqua;
+    font-size: medium;
+  }
+  
+  a:active {
+    text-decoration: none;
+    background: transparent;
+    color: aqua;
+    font-size: medium;
+  }
+  .button-85 {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #fff200;
+    cursor: pointer;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    position: fixed;
+    right: 22px;
+    top: 20px;
+    animation: fadeIn 10s;
+  }
+
+  .button-85:before {
+    content: "";
+    background: linear-gradient(45deg, #83B4FF, #00ffd5, #222, #666, #ccc);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowing-button-85 {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+  }
+  
+  .button-85:after{
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  
+  .button-85:hover {
+    transform: scale(1.05);
+    font-weight: bold;
+  }
