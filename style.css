@@ -16,7 +16,7 @@
   margin-bottom: 50px;
   color: cornsilk;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin-top: -70px;
+  margin-top: -60px;
   transition: ease-in;
 }
 
@@ -28,7 +28,8 @@
   margin-bottom: 50px;
   color: #b30000;
   font-family: "Audiowide", sans-serif;
-  margin-top: -70px;
+  margin-top: 20px;
+  margin-left: 55px;
 }
 
 @keyframes fadeIn {
@@ -154,7 +155,7 @@ a:active {
   -webkit-user-select: none;
   touch-action: manipulation;
   position: fixed;
-  right: 325px;
+  right: 350px;
   top: 20px;
   animation: fadeIn 10s;
 }
