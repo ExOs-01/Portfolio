@@ -1,6 +1,100 @@
 *{
   background-color: #111;
 }
+ .body{
+  background-color: #111;
+ }
+.fa-3x{
+  background-color: darkSlateGray;
+}
+.fa-2x{
+  background-color: gray;
+}
+.parent2 {
+  top:15px;
+  left:15px;
+  position:fixed;
+ display:block;
+  width:100px;
+  height:100px;
+  background-color:darkSlateGray;
+  border-radius:50%;
+  z-index:20;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+.test1 {
+  width:60%;
+  height:60%;
+  background-color:dimGray;
+  border-radius:50%;
+  position:absolute;
+  color:white;
+  text-align:center;
+  line-height:70px;
+    top:25%;
+  left:25%;
+  z-index:19;
+  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    position:absolute;
+}
+.test2 {
+  width:60%;
+  height:60%;
+  background-color:dimGray;
+  border-radius:50%;
+  position:absolute;
+  color:white;
+  text-align:center;
+  line-height:70px;
+    top:25%;
+  left:25%;
+  z-index:19;
+  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .2s;
+}
+.test3 {
+  width:60%;
+  height:60%;
+  background-color:dimGray;
+  border-radius:50%;
+  position:absolute;
+  color:white;
+  text-align:center;
+  line-height:70px;
+    top:25%;
+  left:25%;
+  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .4s;  
+}
+  .test4 {
+  width:60%;
+  height:60%;
+  background-color:dimGray;
+  border-radius:50%;
+  position:absolute;
+  color:white;
+  text-align:center;
+  line-height:70px;
+  top:25%;
+  left:25%;
+  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .6s;  
+}
+.mask2 {
+  top:15px;
+  left:15px;
+  width:100px;
+  height:100px;
+  background:darkSlateGray;
+  border-radius:50%;
+  position:absolute;
+  z-index:21;
+  color:white;
+  text-align:center;
+  line-height:120px;
+  cursor:pointer;
+  position:fixed;
+  
+}
 
 .name {
   display: flex;
@@ -11,32 +105,37 @@
 
 .name h1 {
   animation: fadeIn 1.5s;
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 600;
   margin-bottom: 50px;
   color: cornsilk;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin-top: -60px;
+  margin-top: 0px;
   transition: ease-in;
+  margin-left: 100px;
+  background-color: #111;
 }
 
 .name h2 {
   animation: fadeIn 3s;
   width: 88%;
-  font-size: 6rem;
+  font-size: 10rem;
   font-weight: 500;
   margin-bottom: 50px;
   color: #b30000;
   font-family: "Audiowide", sans-serif;
-  margin-top: 20px;
+  margin-top: 90px;
   margin-left: 55px;
+  background-color: #111;
 }
 
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
-
+.div.detail{
+  background-color: #111;
+}
 .detail {
   animation: fadeIn 12s;
   width: 1000px;
@@ -46,7 +145,9 @@
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   position: relative;
-  margin-top: -250px;
+  margin-top: -150px;
+  background-color: #111;
+  margin-left: 23px;
   
 }
 
@@ -67,9 +168,10 @@
   width: 44%;
   margin: auto;
   padding: 20px 0;
-  bottom: 0px;
+  bottom: -140px;
   position: relative;
   shape-rendering: crispEdges;
+  background-color: #111;
  
   
 }
@@ -82,161 +184,29 @@
 a:link {
   text-decoration: none;
   background: transparent;
-  color: aqua;
+  color: rgb(212, 212, 212);
   font-size: medium;
 }
 
 a:visited {
   text-decoration: none;
   background: transparent;
-  color: aqua;
+  color: rgb(212, 212, 212);;
   font-size: medium;
 }
 
 a:hover {
   text-decoration: none;
   background: transparent;
-  color: aqua;
+  color: rgb(212, 212, 212);;
   font-size: medium;
 }
 
 a:active {
   text-decoration: none;
   background: transparent;
-  color: aqua;
+  color: rgb(212, 212, 212);;
   font-size: medium;
-}
-
-.button-85 {
-  padding: 0.6em 2em;
-  border: none;
-  outline: none;
-  color: rgb(255, 255, 255);
-  background: #fff200;
-  cursor: pointer;
-  z-index: 0;
-  border-radius: 10px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  position: fixed;
-  right: 22px;
-  top: 20px;
-  animation: fadeIn 10s;
-}
-
-.button-86 {
-  padding: 0.6em 2em;
-  border: none;
-  outline: none;
-  color: rgb(255, 255, 255);
-  background: #222;
-  cursor: pointer;
-  z-index: 0;
-  border-radius: 10px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  position: fixed;
-  right: 200px;
-  top: 20px;
-  animation: fadeIn 10s;
-}
-.button-87 {
-  padding: 0.6em 2em;
-  border: none;
-  outline: none;
-  color: rgb(255, 255, 255);
-  background: #222;
-  cursor: pointer;
-  z-index: 0;
-  border-radius: 10px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  position: fixed;
-  right: 350px;
-  top: 20px;
-  animation: fadeIn 10s;
-}
-
-.button-85:before {
-  content: "";
-  background: linear-gradient(45deg, #83B4FF, #00ffd5, #222, #666, #ccc);
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  background-size: 400%;
-  z-index: -1;
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  animation: glowing-button-85 20s linear infinite;
-  transition: opacity 0.3s ease-in-out;
-  border-radius: 10px;
-}
-
-.button-86:before {
-  content: "";
-  background: linear-gradient(45deg, #83B4FF, #00ffd5, #222, #666, #ccc);
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  background-size: 400%;
-  z-index: -1;
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  animation: glowing-button-85 20s linear infinite;
-  transition: opacity 0.3s ease-in-out;
-  border-radius: 10px;
-}
-.button-87:before {
-  content: "";
-  background: linear-gradient(45deg, #83B4FF, #00ffd5, #222, #666, #ccc);
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  background-size: 400%;
-  z-index: -1;
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  animation: glowing-button-85 20s linear infinite;
-  transition: opacity 0.3s ease-in-out;
-  border-radius: 10px;
-}
-
-@keyframes glowing-button-85 {
-  0% {
-      background-position: 0 0;
-  }
-  50% {
-      background-position: 400% 0;
-  }
-  100% {
-      background-position: 0 0;
-  }
-}
-
-.button-85:after, .button-86:after,.button-87::after {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #222;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
-}
-
-.button-85:hover, .button-86:hover,.button-87:hover{
-  transform: scale(1.05);
-  font-weight: bold;
 }
 
 .top {
@@ -272,4 +242,40 @@ a:active {
 .nav ul li {
   display: inline-block;
   margin: 0 10px;
+}
+html, body {
+  background-color: #111 !important;
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensure the background covers the full height */
+  width: 100%; /* Ensure the background covers the full width */
+}
+
+/* Universal Selector to Apply Background Color */
+* {
+  background-color: #111 !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure specific elements are targeted */
+.body, .name, .detail, .image, .div {
+  background-color: #111 !important;
+}
+
+
+
+
+/* Navigation Bar */
+.nav, .top, .nav ul, .nav ul li {
+  background-color: #111 !important;
+}
+
+
+
+
+
+/* For any additional containers or divs */
+div {
+  background-color: #111 !important;
 }
