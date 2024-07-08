@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -5,59 +6,86 @@ body {
     background-color: #2b2b2b;
     margin: 0;
     padding: 20px;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit; /* Inherit box-sizing property for all elements */
+}
+
+/* Container */
 .container {
     display: grid;
-    grid-template: auto;
-    max-width: 800px;
+    grid-template-columns: 1fr;
+    max-width: 100%; /* Change to 100% to fit within the viewport */
     margin: auto;
     background-color: #2b2b2b;
     padding: 20px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
     border-radius: 10px;
+    gap: 20px; /* Adds space between grid items */
+    overflow: hidden; /* Prevent content from overflowing */
 }
+
+/* Header */
 .header {
     display: flex;
     align-items: center;
+    flex-direction: column;
+    text-align: center;
     border-bottom: 2px solid #444;
     padding-bottom: 10px;
 }
+
 .header img {
     border-radius: 50%;
-    margin-right: 20px;
+    margin-bottom: 20px;
     width: 150px;
     height: 150px;
     border: 3px solid #444;
 }
+
 .header h1 {
     margin: 0;
     color: #fff;
 }
+
 .header p {
     margin: 5px 0 0;
     color: #aaa;
 }
+
+/* Contact Section */
 .contact p, .contact a {
     color: #aaa;
     margin: 5px 0;
     text-decoration: none;
 }
+
 .contact a:hover {
     color: #fff;
 }
+
+/* Section Styles */
 .section {
     margin-top: 20px;
 }
+
 .section h2 {
     margin-bottom: 10px;
     color: #fff;
     border-bottom: 2px solid #444;
     padding-bottom: 5px;
 }
+
 .section ul {
     list-style-type: none;
     padding: 0;
+    margin: 0; /* Remove default margin */
 }
+
 .section ul li {
     margin-bottom: 15px;
     color: #ccc;
@@ -65,16 +93,21 @@ body {
     padding: 10px;
     border-radius: 5px;
 }
+
 .section ul li strong {
     color: #f39c12;
 }
+
 .section ul li a {
     color: #f39c12;
     text-decoration: none;
 }
+
 .section ul li a:hover {
     text-decoration: underline;
 }
+
+/* Button */
 .button-85 {
     padding: 0.6em 2em;
     border: none;
@@ -91,9 +124,9 @@ body {
     right: 22px;
     top: 20px;
     animation: fadeIn 10s;
-  }
+}
 
-  .button-85:before {
+.button-85:before {
     content: "";
     background: linear-gradient(45deg, #83B4FF, #00ffd5, #222, #666, #ccc);
     position: absolute;
@@ -108,9 +141,9 @@ body {
     animation: glowing-button-85 20s linear infinite;
     transition: opacity 0.3s ease-in-out;
     border-radius: 10px;
-  }
-  
-  @keyframes glowing-button-85 {
+}
+
+@keyframes glowing-button-85 {
     0% {
         background-position: 0 0;
     }
@@ -120,9 +153,9 @@ body {
     100% {
         background-position: 0 0;
     }
-  }
-  
-  .button-85:after{
+}
+
+.button-85:after {
     z-index: -1;
     content: "";
     position: absolute;
@@ -132,39 +165,50 @@ body {
     left: 0;
     top: 0;
     border-radius: 10px;
-  }
-  
-  .button-85:hover {
+}
+
+.button-85:hover {
     transform: scale(1.05);
     font-weight: bold;
-  }
+}
 
-  
-  
-a:link {
+/* Links */
+a:link, a:visited, a:hover, a:active {
     text-decoration: none;
     background: transparent;
     color: aqua;
     font-size: medium;
-  }
-  
-  a:visited {
-    text-decoration: none;
-    background: transparent;
-    color: aqua;
-    font-size: medium;
-  }
-  
-  a:hover {
-    text-decoration: none;
-    background: transparent;
-    color: aqua;
-    font-size: medium;
-  }
-  
-  a:active {
-    text-decoration: none;
-    background: transparent;
-    color: aqua;
-    font-size: medium;
-  }
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        padding: 40px; /* Increase padding for larger screens */
+    }
+
+    .header {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .header img {
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* Adjust grid for larger screens */
+        max-width: 90vw; /* Set max width to 90% of the viewport width */
+    }
+
+    .header {
+        grid-column: 1 / -1; /* Spans all columns */
+    }
+
+    .contact, .section {
+        grid-column: span 2;
+    }
+}

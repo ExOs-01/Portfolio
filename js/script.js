@@ -1,24 +1,31 @@
-$(document).ready(function() {
+const text1 = "GET";
+const text2 = "STARTED";
+const speed = 50; 
 
-    var active1 = false;
-    var active2 = false;
-    var active3 = false;
-    var active4 = false;
-  
-      $('.parent2').on('mousedown touchstart', function() {
-      
-      if (!active1) $(this).find('.test1').css({'background-color': 'gray', 'transform': 'translate(0px,125px)'});
-      else $(this).find('.test1').css({'background-color': 'dimGray', 'transform': 'none'}); 
-       if (!active2) $(this).find('.test2').css({'background-color': 'gray', 'transform': 'translate(60px,105px)'});
-      else $(this).find('.test2').css({'background-color': 'darkGray', 'transform': 'none'});
-        if (!active3) $(this).find('.test3').css({'background-color': 'gray', 'transform': 'translate(105px,60px)'});
-      else $(this).find('.test3').css({'background-color': 'silver', 'transform': 'none'});
-        if (!active4) $(this).find('.test4').css({'background-color': 'gray', 'transform': 'translate(125px,0px)'});
-      else $(this).find('.test4').css({'background-color': 'silver', 'transform': 'none'});
-      active1 = !active1;
-      active2 = !active2;
-      active3 = !active3;
-      active4 = !active4;
-        
-      });
-  });
+function typeText(elementId, text, callback) {
+    let i = 0;
+    const element = document.getElementById(elementId);
+
+    function type() {
+        if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(type, speed);
+        } else {
+            element.style.borderRight = "none"; 
+            if (callback) {
+                callback();
+            }
+        }
+    }
+
+    type();
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    typeText("text1", text1, function() {
+        typeText("text2", text2, function() {
+            document.getElementById("action-button").classList.remove("hidden");
+        });
+    });
+});
