@@ -1,22 +1,27 @@
-/* Global styles */
-body {
-  font-family: 'Arial', sans-serif;
+/* General reset for margins and paddings */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: 'Arial', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   min-height: 100vh;
   background: #121212; /* Dark background */
   color: #e0e0e0; /* Light text color */
-  overflow: hidden; /* Keep flying image inside the viewport */
 }
 
+/* Header styling */
 .header {
   width: 100%;
   background-color: #1f1f1f; /* Darker header */
-  padding: 20px 0;
+  padding: 10px 0; /* Adjust padding to fit layout */
   display: flex;
   justify-content: center;
   position: fixed; /* Fixed at the top */
@@ -25,68 +30,79 @@ body {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
+/* Navigation styling */
 .navigation {
   display: flex;
 }
 
 .navigation a {
-  color: #e0e0e0; 
-  padding: 14px 20px;
+  color: #e0e0e0;
+  padding: 10px 15px; /* Adjust padding */
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 18px; 
+  font-size: 16px;
   transition: background-color 0.3s, color 0.3s;
 }
 
 .navigation a:hover {
   background-color: #ffb74d;
-  color: #121212; 
+  color: #121212;
 }
 
+/* Logo container styling */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px; /* Adjust as necessary */
+}
+
+/* Logo image styling */
+.logo {
+  size: 200px ;
+  max-width: 150px; /* Adjust width as needed */
+  height: auto;
+  margin-bottom: -20px; /* Bring logo closer to content */
+}
+
+/* Content styling */
 .content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 100px;
-  padding: 20px;
+  margin-top: 20px; /* Adjust to reduce gap */
+  padding: 10px; /* Adjust padding */
   max-width: 800px;
   width: 90%;
   background-color: rgba(33, 33, 33, 0.9);
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   text-align: center;
-  position: relative; 
 }
 
+/* Text container styling */
 .text-container {
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-top: 10px; /* Adjust to remove space */
 }
 
+/* Name styling */
 .name p {
-  font-size: 50px; 
-  margin: 0;
+  font-size: 24px; /* Adjust font size as needed */
+  margin: 5px 0; /* Minimize margin */
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid #e0e0e0; 
+  border-right: 3px solid #e0e0e0;
   box-sizing: border-box;
-  font-weight: bold; 
+  font-weight: bold;
   animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
-.name #text1 {
-  border-right: none; 
-}
-
-.name #text2 {
-  border-right: none; 
-}
-
+/* Button styling */
 .button {
   display: inline-block;
   padding: 10px 20px;
@@ -105,9 +121,10 @@ body {
 }
 
 .hidden {
-  display: none; 
+  display: none;
 }
 
+/* Typing animation */
 @keyframes typing {
   from { width: 0; }
   to { width: 100%; }
@@ -118,7 +135,7 @@ body {
   50% { border-color: #e0e0e0; }
 }
 
-
+/* Responsive design */
 @media (max-width: 600px) {
   .content {
       width: 100%;
@@ -127,5 +144,9 @@ body {
 
   .name p {
       font-size: 20px;
+  }
+
+  .logo {
+      max-width: 100px; /* Adjust logo size for small screens */
   }
 }
