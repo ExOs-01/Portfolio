@@ -1,6 +1,6 @@
 <?php
 // Database configuration
-$servername = "localhost";
+$servername = "abishank.com.np";
 $username = "root"; // Replace with your actual database username
 $password = ""; // Replace with your actual database password
 $dbname = "mydatabase"; // Replace with your actual database name
