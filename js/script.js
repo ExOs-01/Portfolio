@@ -11,6 +11,7 @@ function typeText(elementId, text, callback) {
             element.innerHTML += text.charAt(i);
             i++;
             setTimeout(type, speed);
+            
         } else {
             element.style.borderRight = "none"; 
             if (callback) {
